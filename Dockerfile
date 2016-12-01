@@ -2,6 +2,7 @@ FROM ubuntu:16.10
 MAINTAINER Tanya Kozel <sankleta@gmail.com>
 
 RUN apt-get update
+RUN apt-get install -y apt-utils
 RUN apt-get install -y curl
 
 RUN apt-get install -y openjdk-8-jre-headless
@@ -22,4 +23,4 @@ RUN apt-get -y install yarn
 RUN yarn add appium@1.6.0
 
 EXPOSE 4723
-CMD /opt/appium/node_modules/appium/bin/appium.js
+CMD /node_modules/appium/build/lib/main.js
