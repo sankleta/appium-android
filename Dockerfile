@@ -8,7 +8,7 @@ RUN apt-get install -y curl
 RUN apt-get install -y openjdk-8-jre-headless
     
 RUN curl "https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz" | tar -zxv -C /opt/
-RUN echo y | /opt/android-sdk-linux/tools/android update sdk --all --filter platform-tools,build-tools-25.0.0 --no-ui --force
+RUN echo y | /opt/android-sdk-linux/tools/android update sdk --all --filter platform-tools,build-tools-24.0.3 --no-ui --force
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
