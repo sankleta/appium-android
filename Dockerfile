@@ -17,8 +17,9 @@ ENV PATH $PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
+RUN npm install appium-adb@2.7.0
 RUN npm install appium@1.6.0
-RUN npm install appium-doctor
+RUN npm install appium-doctor@1.2.5
 
 EXPOSE 4723
 CMD /node_modules/appium/build/lib/main.js
